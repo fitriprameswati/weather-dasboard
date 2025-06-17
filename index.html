@@ -363,7 +363,7 @@
   .map-placeholder {
     height: 280px;
     border-radius: 20px;
-    background: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b6e2ce16-9086-445f-8e92-1ac1d89ce329.png') center/cover no-repeat;
+    background: url('https://placehold.co/800x280/008080/ffffff?text=Peta+Cuaca+Indonesia') center/cover no-repeat;
     box-shadow: 0 14px 32px rgba(0,0,0,0.15);
   }
 
@@ -507,7 +507,7 @@
       <div class="current-temp" id="currentTemp" aria-live="polite">--°C</div>
     </div>
     <div class="current-condition">
-      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/18ee3c77-b173-41e2-94e2-1363102c4f1e.png" alt="Ikon cuaca matahari cerah" class="weather-icon" id="currentIcon" />
+      <img src="https://placehold.co/120x120/008080/ffffff?text=Matahari" alt="Ikon cuaca matahari cerah" class="weather-icon" id="currentIcon" />
       <div id="currentConditionText">--</div>
       <div id="feelsLikeText">Terasa seperti --°C</div>
       <div id="humidityText">Kelembapan: --%</div>
@@ -702,7 +702,7 @@
       document.getElementById('pressureValue').textContent = data.pressure + ' hPa';
       document.getElementById('visibilityValue').textContent = data.visibility + ' km';
 
-      document.getElementById('currentIcon').src = `https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/200dd818-b817-4ee9-8e72-bd57ff7a7889.png))}`;
+      document.getElementById('currentIcon').src = `https://placehold.co/120x120/008080/ffffff?text=${capitalize(data.condition.charAt(0))}`;
       document.getElementById('currentIcon').alt = `Ikon cuaca: ${capitalize(data.condition)}`;
       updateWeatherBackground(data.condition);
     }
@@ -717,7 +717,7 @@
         div.setAttribute('role', 'listitem');
         div.innerHTML = `
           <div class="hourly-time">${hour.time}</div>
-          <img class="hourly-icon" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5bba43b2-4f40-436c-b7b1-f4115c731d22.png" alt="Cuaca ${capitalize(hour.condition)}" />
+          <img class="hourly-icon" src="https://placehold.co/36x36/008080/ffffff?text=${capitalize(hour.condition.charAt(0))}" alt="Cuaca ${capitalize(hour.condition)}" />
           <div class="hourly-temp">${hour.temp}°C</div>
         `;
         container.appendChild(div);
@@ -736,7 +736,7 @@
         div.setAttribute('role', 'listitem');
         div.innerHTML = `
           <div class="daily-day">${dayName}</div>
-          <img class="daily-icon" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6bc28b2a-4575-44d3-84f6-c876b620c1e6.png" alt="Cuaca ${capitalize(day.condition)}" />
+          <img class="daily-icon" src="https://placehold.co/60x60/008080/ffffff?text=${capitalize(day.condition.charAt(0))}" alt="Cuaca ${capitalize(day.condition)}" />
           <div class="daily-temp">
             <span class="temp-high">${day.high}°</span>
             <span class="temp-low">${day.low}°</span>
